@@ -10,6 +10,8 @@ config:
     existingSecretName: ""
     # --  default: golink-authkey
     keyName: golink-authkey
+    # The tags requested
+    tags: ""
   # -- Changes the service name from the default 'go' that golink uses to register itself in the
   # tailnet
   hostname: ""

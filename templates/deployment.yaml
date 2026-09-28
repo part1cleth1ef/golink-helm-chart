@@ -58,6 +58,10 @@ spec:
                   name: {{ include "golink.fullname" . }}
                   {{- end }}
                   key: {{ .Values.config.authKey.keyName }}
+            {{- if .Values.config.authKey.tags }}
+            - name: TS_EXTRA_ARGS
+              value: "--advertise-tags={{ .Values.config.authKey.tags }}"
+            {{- end }}
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
